@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00837060E15825E6D0610DB1 /* ModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D12AFCDA6B7E2A41F05396 /* ModelsTests.swift */; };
+		21B075F0EE2AEC4FCB60A5B1 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2943F18286F17510EFECF2F0 /* AppStore.swift */; };
+		4CBA91F7BFB1D65B09BB8270 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1DFCA6037698FF0308C7F9 /* MessageView.swift */; };
+		592297D6B98C90F28FD3C31F /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB23080C5E446783E851282 /* Models.swift */; };
+		65FA0057562B8BD08ABB415E /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0438A71CCF24E0CFAFCFA144 /* BookView.swift */; };
+		7A2A66A77A77F1235E8DAF48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F3EE70E1031F6A1CB96E90E /* Assets.xcassets */; };
+		7B13835F7526F5B2E82C4C53 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0923DBA35872412BE541CF /* ServerConfig.swift */; };
+		80684BA8E91371933AE85526 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7F9C1E4939B87F5AA04DA /* SettingsView.swift */; };
+		8959AD301005AD5D41351080 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A64078084345516662C51C2 /* Theme.swift */; };
+		B8ABB629DBB583E391D00196 /* PointGuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4714F9693B7868774AD28BE /* PointGuardApp.swift */; };
+		C55B75D57B71378537D21BA2 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098FD98FFBEA18FF4F1D809 /* RootTabView.swift */; };
+		F6E20F1C3503DC652673B458 /* PointGuardClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C8501F0A9A2EA250BAB1F2 /* PointGuardClient.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEF8AF6A0894CE5DF050E790 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C6EB832D23145A1001C427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6275B3B39A7607FEEED6D7B;
+			remoteInfo = PointGuard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0438A71CCF24E0CFAFCFA144 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		1E0923DBA35872412BE541CF /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
+		2943F18286F17510EFECF2F0 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		2C3E012C114A47AF58C25A77 /* PointGuard.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PointGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DB23080C5E446783E851282 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		5A64078084345516662C51C2 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		8771FFC6717DBE62D079D1DF /* PointGuardTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PointGuardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87C8501F0A9A2EA250BAB1F2 /* PointGuardClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointGuardClient.swift; sourceTree = "<group>"; };
+		8A1DFCA6037698FF0308C7F9 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		8F3EE70E1031F6A1CB96E90E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2C1F972B18AD97D06D32AA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A9D12AFCDA6B7E2A41F05396 /* ModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsTests.swift; sourceTree = "<group>"; };
+		C4714F9693B7868774AD28BE /* PointGuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointGuardApp.swift; sourceTree = "<group>"; };
+		CBD7F9C1E4939B87F5AA04DA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F098FD98FFBEA18FF4F1D809 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		191BB8945E47A654C85BA6BA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2943F18286F17510EFECF2F0 /* AppStore.swift */,
+				8F3EE70E1031F6A1CB96E90E /* Assets.xcassets */,
+				A2C1F972B18AD97D06D32AA7 /* Info.plist */,
+				3DB23080C5E446783E851282 /* Models.swift */,
+				C4714F9693B7868774AD28BE /* PointGuardApp.swift */,
+				87C8501F0A9A2EA250BAB1F2 /* PointGuardClient.swift */,
+				1E0923DBA35872412BE541CF /* ServerConfig.swift */,
+				5A64078084345516662C51C2 /* Theme.swift */,
+				B9BDEFCE378C20D200732FE9 /* Views */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		508FB7DC68938F4625DD6FF7 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A9D12AFCDA6B7E2A41F05396 /* ModelsTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		AA826321361D5FFD8D094A3D = {
+			isa = PBXGroup;
+			children = (
+				191BB8945E47A654C85BA6BA /* App */,
+				508FB7DC68938F4625DD6FF7 /* Tests */,
+				B847B8467DDC7F3CA2FBB021 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B847B8467DDC7F3CA2FBB021 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C3E012C114A47AF58C25A77 /* PointGuard.app */,
+				8771FFC6717DBE62D079D1DF /* PointGuardTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9BDEFCE378C20D200732FE9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0438A71CCF24E0CFAFCFA144 /* BookView.swift */,
+				8A1DFCA6037698FF0308C7F9 /* MessageView.swift */,
+				F098FD98FFBEA18FF4F1D809 /* RootTabView.swift */,
+				CBD7F9C1E4939B87F5AA04DA /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45D53E96A2C3872A95C34254 /* PointGuardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79F35B9CE231756F82B2B893 /* Build configuration list for PBXNativeTarget "PointGuardTests" */;
+			buildPhases = (
+				467B6BB735C92F917657D6F6 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06E5846EEBED569594607683 /* PBXTargetDependency */,
+			);
+			name = PointGuardTests;
+			packageProductDependencies = (
+			);
+			productName = PointGuardTests;
+			productReference = 8771FFC6717DBE62D079D1DF /* PointGuardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C6275B3B39A7607FEEED6D7B /* PointGuard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 032F5B4B9FC1DEA9B2430985 /* Build configuration list for PBXNativeTarget "PointGuard" */;
+			buildPhases = (
+				CBD57C44B35D82D28BF7D7B6 /* Sources */,
+				7006BED67F6F649C92BBB29E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PointGuard;
+			packageProductDependencies = (
+			);
+			productName = PointGuard;
+			productReference = 2C3E012C114A47AF58C25A77 /* PointGuard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C6EB832D23145A1001C427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = DCB00CB77EED5ACB3B77E13D /* Build configuration list for PBXProject "PointGuard" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = AA826321361D5FFD8D094A3D;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B847B8467DDC7F3CA2FBB021 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6275B3B39A7607FEEED6D7B /* PointGuard */,
+				45D53E96A2C3872A95C34254 /* PointGuardTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7006BED67F6F649C92BBB29E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A2A66A77A77F1235E8DAF48 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		467B6BB735C92F917657D6F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00837060E15825E6D0610DB1 /* ModelsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBD57C44B35D82D28BF7D7B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21B075F0EE2AEC4FCB60A5B1 /* AppStore.swift in Sources */,
+				65FA0057562B8BD08ABB415E /* BookView.swift in Sources */,
+				4CBA91F7BFB1D65B09BB8270 /* MessageView.swift in Sources */,
+				592297D6B98C90F28FD3C31F /* Models.swift in Sources */,
+				B8ABB629DBB583E391D00196 /* PointGuardApp.swift in Sources */,
+				F6E20F1C3503DC652673B458 /* PointGuardClient.swift in Sources */,
+				C55B75D57B71378537D21BA2 /* RootTabView.swift in Sources */,
+				7B13835F7526F5B2E82C4C53 /* ServerConfig.swift in Sources */,
+				80684BA8E91371933AE85526 /* SettingsView.swift in Sources */,
+				8959AD301005AD5D41351080 /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06E5846EEBED569594607683 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6275B3B39A7607FEEED6D7B /* PointGuard */;
+			targetProxy = CEF8AF6A0894CE5DF050E790 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7C43DFB449F4CF639AD6A831 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.10;
+			};
+			name = Release;
+		};
+		899FA8F800399ED24561B1B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rocks.barry.pointguard.PointGuardTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PointGuard.app/PointGuard";
+			};
+			name = Release;
+		};
+		89CAA36CCAD09B9E13DE7233 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rocks.barry.pointguard.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		900FF3F95B93D9568A845823 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rocks.barry.pointguard.PointGuardTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PointGuard.app/PointGuard";
+			};
+			name = Debug;
+		};
+		91466E3723DD1F091A7DC736 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.10;
+			};
+			name = Debug;
+		};
+		B21B21E8733F7262951F34CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rocks.barry.pointguard.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		032F5B4B9FC1DEA9B2430985 /* Build configuration list for PBXNativeTarget "PointGuard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B21B21E8733F7262951F34CD /* Debug */,
+				89CAA36CCAD09B9E13DE7233 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		79F35B9CE231756F82B2B893 /* Build configuration list for PBXNativeTarget "PointGuardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				900FF3F95B93D9568A845823 /* Debug */,
+				899FA8F800399ED24561B1B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DCB00CB77EED5ACB3B77E13D /* Build configuration list for PBXProject "PointGuard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91466E3723DD1F091A7DC736 /* Debug */,
+				7C43DFB449F4CF639AD6A831 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C6EB832D23145A1001C427E /* Project object */;
+}
