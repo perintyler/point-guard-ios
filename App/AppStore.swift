@@ -11,6 +11,14 @@ final class AppStore: ObservableObject {
     @Published var listError: String?
     @Published var isLoading = false
 
+    @Published var debrief: Debrief?
+    @Published var debriefError: String?
+
+    /// The service answered 503: it is up and has not produced a debrief yet.
+    /// Kept apart from `debriefError` so the view can say "starting up"
+    /// instead of "can't reach point-guard" about a service it just reached.
+    @Published var debriefNotReady = false
+
     var client: PointGuardClient { PointGuardClient(config: config) }
 
     private var pollTimer: Timer?
@@ -44,12 +52,37 @@ final class AppStore: ObservableObject {
         }
     }
 
+    func refreshDebrief() async {
+        do {
+            debrief = try await client.debrief().debrief
+            debriefError = nil
+            debriefNotReady = false
+        } catch PointGuardError.http(503, _) {
+            // Not a failure: the service is up and has not produced a debrief
+            // yet. Keep whatever is already on screen.
+            debriefNotReady = true
+            debriefError = nil
+        } catch {
+            debriefNotReady = false
+            debriefError = error.localizedDescription
+        }
+    }
+
     /// point-guard has no realtime push for the book; 45s balances
     /// freshness against not hammering the service.
+    ///
+    /// Polling is owned by the app, NOT by whichever tab is on screen. It
+    /// used to start in BookView.task and stop in its .onDisappear -- which
+    /// fires on a tab switch, so with more than one tab the book silently
+    /// stopped refreshing whenever you looked at anything else, and two tabs
+    /// would fight over one timer.
     func startPolling() {
         stopPolling()
         pollTimer = Timer.scheduledTimer(withTimeInterval: 45, repeats: true) { [weak self] _ in
-            Task { @MainActor [weak self] in await self?.refreshBook() }
+            Task { @MainActor [weak self] in
+                await self?.refreshBook()
+                await self?.refreshDebrief()
+            }
         }
     }
 

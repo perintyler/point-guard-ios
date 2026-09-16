@@ -74,6 +74,15 @@ struct PointGuardClient {
         return try await get(Health.self, path: "/health").ok
     }
 
+    /// GET /debrief. A 503 surfaces as `.http(503, _)` and MUST be handled
+    /// separately by the caller: the service returns it deliberately so that
+    /// "no tick has run yet" stays distinguishable from "there are no
+    /// sessions". Rendered as a generic error, the UI would blame a
+    /// connection it had just used successfully.
+    func debrief() async throws -> DebriefResponse {
+        try await get(DebriefResponse.self, path: "/debrief")
+    }
+
     func book() async throws -> BookResponse {
         try await get(BookResponse.self, path: "/book")
     }

@@ -42,11 +42,10 @@ struct BookView: View {
             .sheet(isPresented: $showSettings) {
                 SettingsView()
             }
-            .task {
-                await store.refreshBook()
-                store.startPolling()
-            }
-            .onDisappear { store.stopPolling() }
+            // No .onDisappear { stopPolling() } here: that fires on a tab
+            // switch, which silently stopped refreshing the moment you looked
+            // at another tab. RootTabView owns the timer now.
+            .task { await store.refreshBook() }
         }
     }
 
