@@ -1,0 +1,20 @@
+name: point-guard-ios
+description: Point Guard on a phone — read the book, message the supervisor, adjust settings
+
+# The supervisor this app is a client of. Declared as a requirement rather than
+# a sub-bag: the phone app needs point-guard registered (and its service
+# reachable), never its tools.
+requires:
+  point-guard:
+    reason: the app is a client of the point-guard service, and ships no backend of its own
+
+apps:
+  PointGuardiOS:
+    description: Read the book and steer the supervisor from a phone
+    platform: ios
+    project: .
+    scheme: PointGuard
+    bundle-id: rocks.barry.pointguard.app
+    # No paid-only entitlements (no app groups, push, or keychain sharing), so
+    # a free personal team can sign this for a device.
+    device: true

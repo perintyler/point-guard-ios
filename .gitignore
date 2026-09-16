@@ -3,3 +3,7 @@ xcuserdata/
 DerivedData/
 *.xcuserstate
 .build/
+
+# barry ios build output (67MB of DerivedData equivalent). Not covered by
+# .build/ above -- the barry CLI writes here, Xcode does not.
+.build-barry-ios/
