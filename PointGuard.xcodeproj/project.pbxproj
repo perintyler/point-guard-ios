@@ -22,6 +22,7 @@
 		8959AD301005AD5D41351080 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A64078084345516662C51C2 /* Theme.swift */; };
 		B8ABB629DBB583E391D00196 /* PointGuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4714F9693B7868774AD28BE /* PointGuardApp.swift */; };
 		C55B75D57B71378537D21BA2 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098FD98FFBEA18FF4F1D809 /* RootTabView.swift */; };
+		EB76B2C841DFE0D5B3B65CB9 /* BaseURLResolutionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4D795062363F5181CC4CFA /* BaseURLResolutionTests.swift */; };
 		F6E20F1C3503DC652673B458 /* PointGuardClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C8501F0A9A2EA250BAB1F2 /* PointGuardClient.swift */; };
 		FDD1D21F95788F87FA059E4D /* DebriefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969A3E9CF32A624E12077388 /* DebriefView.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		3DB23080C5E446783E851282 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		58ADF1381DA8D9243ADCC653 /* DebriefModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebriefModelsTests.swift; sourceTree = "<group>"; };
 		5A64078084345516662C51C2 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		5C4D795062363F5181CC4CFA /* BaseURLResolutionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURLResolutionTests.swift; sourceTree = "<group>"; };
 		773C74EDDCB6DBA1E616A57D /* DebriefModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebriefModels.swift; sourceTree = "<group>"; };
 		8771FFC6717DBE62D079D1DF /* PointGuardTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PointGuardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87C8501F0A9A2EA250BAB1F2 /* PointGuardClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointGuardClient.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		508FB7DC68938F4625DD6FF7 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				5C4D795062363F5181CC4CFA /* BaseURLResolutionTests.swift */,
 				8BBD515251F34CC474377896 /* ConnectionProbeTests.swift */,
 				58ADF1381DA8D9243ADCC653 /* DebriefModelsTests.swift */,
 				A9D12AFCDA6B7E2A41F05396 /* ModelsTests.swift */,
@@ -204,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB76B2C841DFE0D5B3B65CB9 /* BaseURLResolutionTests.swift in Sources */,
 				5DB8E996FB66C4AD1D315C82 /* ConnectionProbeTests.swift in Sources */,
 				85F97B82F2E2EB7BEE53C144 /* DebriefModelsTests.swift in Sources */,
 				00837060E15825E6D0610DB1 /* ModelsTests.swift in Sources */,
