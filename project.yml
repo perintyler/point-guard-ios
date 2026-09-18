@@ -21,8 +21,12 @@ targets:
         CFBundleDisplayName: Point Guard
         UILaunchScreen: {}
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        # The device path is real HTTPS with a real Let's Encrypt certificate,
+        # so no ATS exception is needed for it. The one remaining plain-HTTP
+        # caller is the SIMULATOR, which talks to point-guard on 127.0.0.1:3868 —
+        # `NSAllowsLocalNetworking` permits exactly that and nothing routable.
         NSAppTransportSecurity:
-          NSAllowsArbitraryLoads: true
+          NSAllowsLocalNetworking: true
         ITSAppUsesNonExemptEncryption: false
     settings:
       base:
@@ -47,5 +51,12 @@ schemes:
       config: Debug
     test:
       config: Debug
+      # The live tests need the real BARRY_SECRET, and xcodebuild does not pass
+      # the invoking shell's environment through to the test process. Without
+      # this they XCTSkip on every run — which reads identically to a pass, so
+      # the suite would report green while never touching the service. Expands
+      # from the environment at launch; unset, the tests skip as before.
+      environmentVariables:
+        BARRY_SECRET: $(BARRY_SECRET)
       targets:
         - PointGuardTests

@@ -10,8 +10,10 @@
 		00837060E15825E6D0610DB1 /* ModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D12AFCDA6B7E2A41F05396 /* ModelsTests.swift */; };
 		1E0FE942154FA4C83DC7DE46 /* DebriefModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C74EDDCB6DBA1E616A57D /* DebriefModels.swift */; };
 		21B075F0EE2AEC4FCB60A5B1 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2943F18286F17510EFECF2F0 /* AppStore.swift */; };
+		31FF1E4141329F302237CD91 /* ConnectionProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F09C026ED8254832E72FE75 /* ConnectionProbe.swift */; };
 		4CBA91F7BFB1D65B09BB8270 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1DFCA6037698FF0308C7F9 /* MessageView.swift */; };
 		592297D6B98C90F28FD3C31F /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB23080C5E446783E851282 /* Models.swift */; };
+		5DB8E996FB66C4AD1D315C82 /* ConnectionProbeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBD515251F34CC474377896 /* ConnectionProbeTests.swift */; };
 		65FA0057562B8BD08ABB415E /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0438A71CCF24E0CFAFCFA144 /* BookView.swift */; };
 		7A2A66A77A77F1235E8DAF48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F3EE70E1031F6A1CB96E90E /* Assets.xcassets */; };
 		7B13835F7526F5B2E82C4C53 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0923DBA35872412BE541CF /* ServerConfig.swift */; };
@@ -36,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		0438A71CCF24E0CFAFCFA144 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		0F09C026ED8254832E72FE75 /* ConnectionProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionProbe.swift; sourceTree = "<group>"; };
 		1E0923DBA35872412BE541CF /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
 		2943F18286F17510EFECF2F0 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		2C3E012C114A47AF58C25A77 /* PointGuard.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PointGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +49,7 @@
 		8771FFC6717DBE62D079D1DF /* PointGuardTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PointGuardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87C8501F0A9A2EA250BAB1F2 /* PointGuardClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointGuardClient.swift; sourceTree = "<group>"; };
 		8A1DFCA6037698FF0308C7F9 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		8BBD515251F34CC474377896 /* ConnectionProbeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionProbeTests.swift; sourceTree = "<group>"; };
 		8F3EE70E1031F6A1CB96E90E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		969A3E9CF32A624E12077388 /* DebriefView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebriefView.swift; sourceTree = "<group>"; };
 		A2C1F972B18AD97D06D32AA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +65,7 @@
 			children = (
 				2943F18286F17510EFECF2F0 /* AppStore.swift */,
 				8F3EE70E1031F6A1CB96E90E /* Assets.xcassets */,
+				0F09C026ED8254832E72FE75 /* ConnectionProbe.swift */,
 				773C74EDDCB6DBA1E616A57D /* DebriefModels.swift */,
 				A2C1F972B18AD97D06D32AA7 /* Info.plist */,
 				3DB23080C5E446783E851282 /* Models.swift */,
@@ -76,6 +81,7 @@
 		508FB7DC68938F4625DD6FF7 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8BBD515251F34CC474377896 /* ConnectionProbeTests.swift */,
 				58ADF1381DA8D9243ADCC653 /* DebriefModelsTests.swift */,
 				A9D12AFCDA6B7E2A41F05396 /* ModelsTests.swift */,
 			);
@@ -198,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB8E996FB66C4AD1D315C82 /* ConnectionProbeTests.swift in Sources */,
 				85F97B82F2E2EB7BEE53C144 /* DebriefModelsTests.swift in Sources */,
 				00837060E15825E6D0610DB1 /* ModelsTests.swift in Sources */,
 			);
@@ -209,6 +216,7 @@
 			files = (
 				21B075F0EE2AEC4FCB60A5B1 /* AppStore.swift in Sources */,
 				65FA0057562B8BD08ABB415E /* BookView.swift in Sources */,
+				31FF1E4141329F302237CD91 /* ConnectionProbe.swift in Sources */,
 				1E0FE942154FA4C83DC7DE46 /* DebriefModels.swift in Sources */,
 				FDD1D21F95788F87FA059E4D /* DebriefView.swift in Sources */,
 				4CBA91F7BFB1D65B09BB8270 /* MessageView.swift in Sources */,

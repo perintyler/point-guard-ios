@@ -2,27 +2,44 @@ import Foundation
 
 /// Where the app talks to point-guard, and how it authenticates.
 ///
-/// Reaching the Mac:
-///  - Simulator: straight to the loopback port point-guard listens on
-///    (127.0.0.1 only — point-guard binds loopback-only, so this only works
-///    when the simulator runs on the same Mac as the service).
-///  - Device: over Tailscale to the Mac, with a Host header so the Mac's
-///    reverse proxy can route the request — same convention barry-iphone
-///    uses for its own server.
+///  - Simulator: straight to the loopback port point-guard listens on. That
+///    works only because the simulator runs on the same Mac as the service.
+///  - Device: HTTPS over the personal tailnet to a userspace `tailscaled`
+///    sidecar, which terminates TLS and proxies to point-guard on
+///    `127.0.0.1:3868`.
+///
+/// point-guard binds loopback ONLY — which is why the old device default,
+/// `http://100.101.38.91:3868`, could never have worked. It named a raw
+/// service port on the WORK tailnet: nothing listens on :3868 across any
+/// tailnet, and the phone is not on that tailnet either. There was no device
+/// path at all; the `:8447` serve endpoint is what creates one.
+///
+/// The device host is a real tailnet DNS name with a real Let's Encrypt
+/// certificate, so there is no certificate prompt and no pinning to do. The
+/// endpoint proxies straight to point-guard, so there is no Host header to
+/// select a site block with.
+///
+/// The secret is REQUIRED on the device path — every route but `/health`
+/// rejects an unauthenticated caller with 403, even from loopback.
 struct ServerConfig: Equatable {
     var baseURL: String
-    var hostHeader: String
     var secret: String
 
     static let defaultsKeyBase = "server.baseURL"
-    static let defaultsKeyHost = "server.hostHeader"
     static let keychainSecretKey = "rocks.barry.pointguard.secret"
+
+    static let defaultDeviceURL = "https://barry-mac.tail5cb2f2.ts.net:8447"
+    static let simulatorURL = "http://127.0.0.1:3868"
+
+    /// The one route point-guard answers without a secret. The probe uses it to
+    /// tell "the server is not there" apart from "the secret is wrong".
+    static let healthPath = "/health"
 
     static var platformDefault: ServerConfig {
         #if targetEnvironment(simulator)
-        ServerConfig(baseURL: "http://127.0.0.1:3868", hostHeader: "", secret: "")
+        ServerConfig(baseURL: simulatorURL, secret: "")
         #else
-        ServerConfig(baseURL: "http://100.101.38.91:3868", hostHeader: "barry.lan", secret: "")
+        ServerConfig(baseURL: defaultDeviceURL, secret: "")
         #endif
     }
 
@@ -38,13 +55,12 @@ struct ServerConfig: Equatable {
             if let secretIndex = args.firstIndex(of: "-pointGuardSecret"), args.count > secretIndex + 1 {
                 secret = args[secretIndex + 1]
             }
-            return ServerConfig(baseURL: args[flagIndex + 1], hostHeader: "", secret: secret)
+            return ServerConfig(baseURL: args[flagIndex + 1], secret: secret)
         }
 
         let d = UserDefaults.standard
         var c = platformDefault
         if let base = d.string(forKey: defaultsKeyBase), !base.isEmpty { c.baseURL = base }
-        if let host = d.string(forKey: defaultsKeyHost) { c.hostHeader = host }
         c.secret = Keychain.read(key: keychainSecretKey) ?? ""
         return c
     }
@@ -52,7 +68,6 @@ struct ServerConfig: Equatable {
     func save() {
         let d = UserDefaults.standard
         d.set(baseURL, forKey: Self.defaultsKeyBase)
-        d.set(hostHeader, forKey: Self.defaultsKeyHost)
         if secret.isEmpty {
             Keychain.delete(key: Self.keychainSecretKey)
         } else {
@@ -60,7 +75,7 @@ struct ServerConfig: Equatable {
         }
     }
 
-    /// Build a request for an API path, applying host header and auth.
+    /// Build a request for an API path, applying auth.
     func request(path: String, query: [URLQueryItem] = []) -> URLRequest? {
         guard var components = URLComponents(string: baseURL) else { return nil }
         components.path = path
@@ -76,7 +91,6 @@ struct ServerConfig: Equatable {
     /// API uses — this picks `authorization: Bearer`, the more standard
     /// header for a bearer token.
     func apply(to req: inout URLRequest) {
-        if !hostHeader.isEmpty { req.setValue(hostHeader, forHTTPHeaderField: "Host") }
         if !secret.isEmpty { req.setValue("Bearer \(secret)", forHTTPHeaderField: "authorization") }
     }
 }

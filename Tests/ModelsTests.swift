@@ -139,7 +139,7 @@ final class ModelsTests: XCTestCase {
     }
 
     func testServerConfigAppliesBearerAuthHeader() {
-        var config = ServerConfig(baseURL: "http://127.0.0.1:3868", hostHeader: "", secret: "s3cr3t")
+        var config = ServerConfig(baseURL: "http://127.0.0.1:3868", secret: "s3cr3t")
         var req = URLRequest(url: URL(string: "http://127.0.0.1:3868/book")!)
         config.apply(to: &req)
         XCTAssertEqual(req.value(forHTTPHeaderField: "authorization"), "Bearer s3cr3t")
@@ -147,13 +147,6 @@ final class ModelsTests: XCTestCase {
         req = URLRequest(url: URL(string: "http://127.0.0.1:3868/book")!)
         config.apply(to: &req)
         XCTAssertNil(req.value(forHTTPHeaderField: "authorization"))
-    }
-
-    func testServerConfigAppliesHostHeader() {
-        let config = ServerConfig(baseURL: "http://100.101.38.91:3868", hostHeader: "barry.lan", secret: "")
-        var req = URLRequest(url: URL(string: "http://100.101.38.91:3868/book")!)
-        config.apply(to: &req)
-        XCTAssertEqual(req.value(forHTTPHeaderField: "Host"), "barry.lan")
     }
 
     // MARK: Helpers
@@ -186,7 +179,7 @@ final class LiveAPITests: XCTestCase {
         guard let secret, !secret.isEmpty else {
             throw XCTSkip("BARRY_SECRET not set in test environment")
         }
-        let config = ServerConfig(baseURL: "http://127.0.0.1:3868", hostHeader: "", secret: secret)
+        let config = ServerConfig(baseURL: "http://127.0.0.1:3868", secret: secret)
         let client = PointGuardClient(config: config)
         do {
             _ = try await client.health()
@@ -223,7 +216,7 @@ final class LiveAPITests: XCTestCase {
         guard let secret, !secret.isEmpty else {
             throw XCTSkip("BARRY_SECRET not set in test environment")
         }
-        let config = ServerConfig(baseURL: "http://127.0.0.1:3868", hostHeader: "", secret: secret)
+        let config = ServerConfig(baseURL: "http://127.0.0.1:3868", secret: secret)
         guard let req = config.request(path: "/nonexistent-route-xyz") else {
             throw XCTSkip("bad URL")
         }
